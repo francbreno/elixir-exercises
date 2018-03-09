@@ -1,17 +1,17 @@
 defmodule MatchstickFactory do
-  @size_big 50
-  @size_medium 20
-  @size_small 5
+  @big 50
+  @medium 20
+  @small 5
   
   def boxes(num_matchsticks) do
-    big_boxes = div(num_matchsticks, @size_big)
-    remaining = rem(num_matchsticks, @size_big)
+    big_boxes = div(num_matchsticks, @big)
+    remaining = rem(num_matchsticks, @big)
 
-    medium_boxes = div(remaining, @size_medium)
-    remaining = rem(remaining, @size_medium)
+    medium_boxes = div(remaining, @medium)
+    remaining = rem(remaining, @medium)
 
-    small_boxes = div(remaining, @size_small)
-    remaining = rem(remaining, @size_small)
+    small_boxes = div(remaining, @small)
+    remaining = rem(remaining, @small)
     %{
         big: big_boxes, 
         medium: medium_boxes, 
