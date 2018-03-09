@@ -1,5 +1,5 @@
 Code.load_file("matchstick_factory.ex")
 
-IO.write MatchstickFactory.boxes(98)
-IO.write MatchstickFactory.boxes(39)
+IO.inspect MatchstickFactory.boxes(98)
+IO.inspect MatchstickFactory.boxes(39)
 
