@@ -1,15 +1,10 @@
-defmodule Salary do
-  def calculate(s) when s <= 2000, do: IO.puts 0
-  def calculate(s) when s <= 3000, do: IO.puts s*0.05
-  def calculate(s) when s <= 6000, do: IO.puts s*0.1
-  def calculate(s), do: IO.puts s*0.15
-  def calculate(_), do: IO.puts "Invalid number"
+salary = IO.gets "What's your salary?\n"
+
+result = case Integer.parse(salary) do
+  :error -> IO.puts "Value is invalid!"
+  {user_salary, _} -> 
+    Code.load_file("learn-functional-programming-with-elixir/ch3/salary.ex")
+    Salary.calculate(user_salary)
 end
 
-Salary.calculate(2000)
-Salary.calculate(3000)
-Salary.calculate(4000)
-Salary.calculate(5000)
-Salary.calculate(6000)
-Salary.calculate(7000)
-Salary.calculate("")
+IO.puts "The result is #{result}"
